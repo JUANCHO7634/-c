@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Carta para Marbella — Fumando en mi Funeral (estética)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="card">
+      <header>
+        <div style="width:48px;height:48px;border-radius:8px;background:rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;font-weight:700">☠</div>
+        <div>
+          <h1>Fumando en mi Funeral — Carta a Marbella</h1>
+          <p>Estética melancólica / sonido ambiental generado</p>
+        </div>
+        <div style="margin-left:auto" class="audio-controls">
+          <span class="badge" id="audioState">Silencio</span>
+          <button class="btn ghost" id="toggleAudio">Reproducir ambiente</button>
+        </div>
+      </header>
+
+      <div class="screens">
+        <!-- Pantalla 1 -->
+        <section id="screen-1" class="screen active">
+          <div class="verify">
+            <h2>Verificación de identidad</h2>
+            <p>Por favor, confirma tu nombre exactamente como está escrito para continuar. Esto protege este mensaje íntimo.</p>
+            <div class="input-row">
+              <input type="text" id="nameInput" placeholder="Escribe el nombre completo..." value="MARBELLA MARTINEZ LUIS" autocomplete="off">
+              <button class="btn" id="verifyBtn">Verificar</button>
+              <button class="btn ghost" id="clearBtn">Borrar</button>
+            </div>
+            <p class="hint">Introduce el nombre en mayúsculas tal como se muestra: <strong>MARBELLA MARTINEZ LUIS</strong></p>
+            <p id="err" style="color:#ff9b9b;font-weight:600;display:none">Nombre incorrecto. Intenta de nuevo.</p>
+          </div>
+        </section>
+
+        <!-- Pantalla 2 -->
+        <section id="screen-2" class="screen">
+          <div>
+            <h2 style="font-family:var(--font-serif)">Collage de recuerdos</h2>
+            <p class="hint">Sube fotos que quieras ver en el collage. Puedes arrastrar varios archivos o usar el selector.</p>
+            <div class="collage-controls">
+              <input type="file" id="files" accept="image/*" multiple>
+              <button class="btn" id="toLetter">Siguiente: Carta</button>
+              <button class="btn ghost" id="resetCollage">Limpiar collage</button>
+            </div>
+            <div class="collage-grid" id="grid"></div>
+          </div>
+        </section>
+
+        <!-- Pantalla 3 -->
+        <section id="screen-3" class="screen">
+          <div class="letter">
+            <h2>Carta para mi amor, Marbella Martínez Luis</h2>
+            <p>Hola, mi amor...<br>
+            Para cuando leas esto, quizá ya no esté, o tal vez sí, pero ya no del mismo modo.<br>
+            <strong>Perdóname, por favor.</strong><br>
+            Si sigo aquí, no te preocupes por mi salud —vive, sal, ríe, conoce gente—, que la vida es corta y mereces cada pedacito de luz que el mundo pueda darte.<br><br>
+            Solo quiero que recuerdes que te amo...<br>
+            Te amo de una forma que las palabras no alcanzan a explicar.<br>
+            Sé que no fui el mejor hombre, y tal vez no supe cuidar bien lo que tenía, pero déjame compensarlo con este mensaje, escrito con los últimos pedazos de corazón que aún laten por ti.<br><br>
+            Gracias, amor mío, por darme lo que nadie me dio de niño: cariño, ternura, y ese abrazo que cura.<br>
+            Déjame ahora liberarte del peso que nunca pediste cargar. No llores por mí, que en cada pensamiento tuyo seguiré respirando un poco más.<br><br>
+            Con todo mi amor,<br>
+            <strong>Juan, tu amolchito...</strong><br>
+            o al menos eso espero.<br><br>
+            <em>P.D.: Gracias por enseñarme lo que es amar de verdad. Te llevaré en el corazón, y te cuidaré, aunque sea desde lo más lejos...</em></p>
+          </div>
+        </section>
+      </div>
+
+      <footer>
+        <div style="display:flex;gap:10px;align-items:center">
+          <button class="btn ghost" id="backBtn">Atrás</button>
+          <span class="hint">Diseño sensible — reemplaza 'background.jpg' por la carátula real.</span>
+        </div>
+        <div>
+          <button class="btn" id="downloadLetter">Descargar carta (.txt)</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
