@@ -5,17 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Carta para Marbella — Fumando en mi Funeral (estética)</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="app">
     <div class="card">
       <header>
         <div style="width:48px;height:48px;border-radius:8px;background:rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;font-weight:700">☠</div>
-        <div>
-          <h1>Fumando en mi Funeral — Carta a Marbella</h1>
-          <p>Estética melancólica / sonido ambiental generado</p>
-        </div>
+        <div><h1>Fumando en mi Funeral — Carta a Marbella</h1></div>
         <div style="margin-left:auto" class="audio-controls">
           <span class="badge" id="audioState">Silencio</span>
           <button class="btn ghost" id="toggleAudio">Reproducir ambiente</button>
@@ -23,28 +20,29 @@
       </header>
 
       <div class="screens">
-        <!-- Pantalla 1 -->
+        <!-- PANTALLA 1 -->
         <section id="screen-1" class="screen active">
           <div class="verify">
             <h2>Verificación de identidad</h2>
-            <p>Por favor, confirma tu nombre exactamente como está escrito para continuar. Esto protege este mensaje íntimo.</p>
+            <p>Por favor, confirma tu nombre exactamente como está escrito.</p>
             <div class="input-row">
               <input type="text" id="nameInput" placeholder="Escribe el nombre completo..." value="MARBELLA MARTINEZ LUIS" autocomplete="off">
               <button class="btn" id="verifyBtn">Verificar</button>
               <button class="btn ghost" id="clearBtn">Borrar</button>
             </div>
-            <p class="hint">Introduce el nombre en mayúsculas tal como se muestra: <strong>MARBELLA MARTINEZ LUIS</strong></p>
+            <p class="hint"><strong>MARBELLA MARTINEZ LUIS</strong></p>
             <p id="err" style="color:#ff9b9b;font-weight:600;display:none">Nombre incorrecto. Intenta de nuevo.</p>
           </div>
         </section>
 
-        <!-- Pantalla 2 -->
+        <!-- PANTALLA 2 -->
         <section id="screen-2" class="screen">
           <div>
             <h2 style="font-family:var(--font-serif)">Collage de recuerdos</h2>
-            <p class="hint">Sube fotos que quieras ver en el collage. Puedes arrastrar varios archivos o usar el selector.</p>
+            <p class="hint">Sube fotos que quieras ver en el collage. Se guardarán automáticamente.</p>
             <div class="collage-controls">
               <input type="file" id="files" accept="image/*" multiple>
+              <input type="file" id="bgUpload" accept="image/*" title="Cambiar fondo">
               <button class="btn" id="toLetter">Siguiente: Carta</button>
               <button class="btn ghost" id="resetCollage">Limpiar collage</button>
             </div>
@@ -52,7 +50,7 @@
           </div>
         </section>
 
-        <!-- Pantalla 3 -->
+        <!-- PANTALLA 3 -->
         <section id="screen-3" class="screen">
           <div class="letter">
             <h2>Carta para mi amor, Marbella Martínez Luis</h2>
@@ -76,11 +74,8 @@
       <footer>
         <div style="display:flex;gap:10px;align-items:center">
           <button class="btn ghost" id="backBtn">Atrás</button>
-          <span class="hint">Diseño sensible — reemplaza 'background.jpg' por la carátula real.</span>
         </div>
-        <div>
-          <button class="btn" id="downloadLetter">Descargar carta (.txt)</button>
-        </div>
+        <div><button class="btn" id="downloadLetter">Descargar carta (.txt)</button></div>
       </footer>
     </div>
   </div>
