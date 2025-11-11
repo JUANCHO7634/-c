@@ -21,7 +21,7 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: url('background.jpg');
+  background-image: url('IMG-20250912-WA0029.jpg');
   background-size: cover;
   background-position: center;
   filter: grayscale(40%) contrast(85%);
